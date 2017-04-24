@@ -1,0 +1,27 @@
+extends ../layout
+
+block content
+  div(class="row")
+    div(class="col-md-8")
+      h1 Usuarios del sistema
+      h2 #{user}
+      table(class="table table-hover table-striped")
+        thead(class="thead-inverse")
+          th Nombre de Usuario
+          th Nombre
+          th Primer Apellido
+          th Segundo Apellido
+          th
+            a(class="btn btn-primary glyphicon glyphicon-plus" href='/users/new')  Nuevo
+        tbody
+          each user in users
+            tr
+              td #{user.usuario}
+              td #{user.nombre}
+              td #{user.primerApellido}
+              td #{user.segundoApellido}
+              td
+                a(class="btn btn-primary" href=`/users/${user._id}`) Ver
+                a(class="btn btn-warning glyphicon glyphicon-edit" href=`/users/${user._id}/edit`)  Editar
+                form(name='delete-user', id='form-delete-user', method='POST', action=`/users/${user._id}?_method=DELETE`)
+                  input(type='submit', class="btn btn-danger", value='Eliminar')

@@ -1,0 +1,7 @@
+extends ../layout
+
+block content
+  h1 Nuevo Usuario
+
+  form(name='add-user', id='form-add-user', method='POST', action='/users')
+    include form.pug

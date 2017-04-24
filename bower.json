@@ -1,0 +1,26 @@
+{
+  "name": "mired",
+  "description": "Mi red sin sentido",
+  "main": "",
+  "authors": [
+    "El Hector <a291528@uach.mx>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Red",
+    "Sin",
+    "Sentido",
+    ">:v"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

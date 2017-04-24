@@ -1,0 +1,7 @@
+extends ../layout
+
+block content
+  h1 Editar Usuario
+
+  form(name='add-user', id='form-add-user', method='POST', action=`/users/${user.id}?_method=PUT`)
+    include form.pug
